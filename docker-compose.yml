@@ -16,4 +16,4 @@ services:
     volumes:
       - ./:/src
     ports:
-      - 80:1313
+      - 1313:1313

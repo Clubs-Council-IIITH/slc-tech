@@ -3,6 +3,7 @@ FROM golang:alpine3.20
 WORKDIR /src
 COPY package*.json .
 
+EXPOSE 1313
 # Install Git
 RUN apk add --update alpine-sdk
 RUN git config --system --add safe.directory /src && \
@@ -17,4 +18,4 @@ RUN npm i --prefer-offline --no-audit --progress=true --loglevel verbose --omit=
 
 # Install Hugo
 RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
-ENTRYPOINT ["hugo", "server"]
+ENTRYPOINT ["npm", "run", "dev"]
