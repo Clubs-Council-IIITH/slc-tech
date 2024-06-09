@@ -17,4 +17,4 @@ RUN npm i --prefer-offline --no-audit --progress=true --loglevel verbose --omit=
 
 # Install Hugo
 RUN CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
-ENTRYPOINT ["npm", "run", "dev"]
+ENTRYPOINT ["hugo", "server"]
