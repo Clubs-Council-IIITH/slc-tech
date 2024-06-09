@@ -171,3 +171,7 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+[security]
+  [security.exec]
+    osEnv = ['.*']

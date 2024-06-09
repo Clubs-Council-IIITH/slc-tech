@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  slc-tech:
+    build:
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/src
+    ports:
+      - 87:80

@@ -1,0 +1,16 @@
+version: "3.8"
+
+networks:
+  portal_network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+  slc-tech:
+    build:
+      dockerfile: Dockerfile
+    networks:
+        portal_network:
+            ipv4_address: 172.20.0.3
+    restart: unless-stopped
