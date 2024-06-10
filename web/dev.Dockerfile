@@ -5,8 +5,8 @@ WORKDIR /src
 EXPOSE 1313
 
 # Set environment variables for versions
-ARG HUGO_VERSION=0.126.1
-ARG GO_VERSION=1.22.3
+ARG HUGO_VERSION=0.127.0
+ARG GO_VERSION=1.22.4
 
 # Install dependencies
 RUN apt-get update && \
