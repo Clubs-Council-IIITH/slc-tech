@@ -1,9 +1,9 @@
 # build and start
 FROM golang:alpine3.20
 WORKDIR /src
-COPY package*.json .
 
 EXPOSE 1313
+
 # Install Git
 RUN apk add --update alpine-sdk
 RUN git config --system --add safe.directory /src && \
@@ -14,6 +14,7 @@ RUN apk add nodejs npm && \
     mkdir /.npm && \
     chmod 777 /.npm
 
+COPY package*.json .
 RUN npm i --prefer-offline --no-audit --progress=true --loglevel verbose --omit=dev
 
 # Install Hugo

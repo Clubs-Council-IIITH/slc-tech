@@ -1,5 +1,3 @@
-version: "3.8"
-
 networks:
   portal_network:
     ipam:
@@ -9,11 +7,12 @@ networks:
 services:
   slc-tech:
     build:
+      context: ./web
       dockerfile: dev.Dockerfile
     networks:
         portal_network:
             ipv4_address: 172.20.0.3
     volumes:
-      - ./:/src
+      - ./web:/src
     ports:
       - 1313:1313
