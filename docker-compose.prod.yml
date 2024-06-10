@@ -1,14 +1,24 @@
-networks:
-  portal_network:
-    ipam:
-      config:
-        - subnet: 172.20.0.0/24
-
 services:
-  slc-tech:
+  slc-tech-build:
     build:
-      dockerfile: Dockerfile
-    networks:
-        portal_network:
-            ipv4_address: 172.20.0.3
+      context: ./web
+      args:
+        - ENV=production
+    volumes:
+      - ./web:/src
+      - slc-tech-vol:/dist
+
+  slc-tech:
+    image: nginx:alpine
+    volumes:
+      - slc-tech-vol:/usr/share/nginx/html
+    # ports:
+    #   - 80:80
+    depends_on:
+      slc-tech-build:
+        condition: service_completed_successfully
     restart: unless-stopped
+
+volumes:
+  slc-tech-vol:
+

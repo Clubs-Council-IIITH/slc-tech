@@ -1,13 +1,51 @@
-# cache dependencies
-FROM node:20-slim AS node_cache
-WORKDIR /cache/
-COPY package*.json .
-RUN npm install --prefer-offline --no-audit --progress=true --loglevel verbose --omit=dev
+# Build and start
+FROM node:20-slim
 
-# build and start
-FROM node:20-slim AS build
 WORKDIR /src
-COPY --from=node_cache /cache/ .
-COPY . .
-RUN npm run build
-ENTRYPOINT [ "npm", "start" ]
+EXPOSE 1313
+
+# Set environment variables for versions
+ARG HUGO_VERSION=0.127.0
+ARG GO_VERSION=1.22.4
+
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y ca-certificates openssl git curl wget && \
+    rm -rf /var/lib/apt/lists/*
+
+# Determine architecture
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "aarch64" ]; then ARCH=arm64; else ARCH=amd64; fi && \
+    echo "Architecture: $ARCH"
+
+# Download and install Hugo
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "aarch64" ]; then ARCH=arm64; else ARCH=amd64; fi && \
+    wget -O hugo_extended_${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.tar.gz && \
+    tar xf hugo_extended_${HUGO_VERSION}.tar.gz && \
+    mv hugo /usr/bin/hugo && \
+    rm hugo_extended_${HUGO_VERSION}.tar.gz && \
+    echo "Hugo installed"
+
+# Download and install Go
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "aarch64" ]; then ARCH=arm64; else ARCH=amd64; fi && \
+    wget -O go${GO_VERSION}.linux-${ARCH}.tar.gz https://dl.google.com/go/go${GO_VERSION}.linux-${ARCH}.tar.gz && \
+    tar -C /usr/local -xzf go${GO_VERSION}.linux-${ARCH}.tar.gz && \
+    rm go${GO_VERSION}.linux-${ARCH}.tar.gz && \
+    echo "Go installed"
+
+# Export Go path
+ENV PATH=$PATH:/usr/local/go/bin
+
+ARG ENV=development
+COPY entrypoints /src/entrypoints
+RUN if [ "$ENV" = "development" ]; then \
+    cp /src/entrypoints/dev.entrypoint.sh /tmp/entrypoint.sh \
+    ; else \
+    cp /src/entrypoints/prod.entrypoint.sh /tmp/entrypoint.sh \
+    ; fi
+
+RUN chmod +x /tmp/entrypoint.sh
+
+ENTRYPOINT [ "/tmp/entrypoint.sh" ]
