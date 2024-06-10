@@ -1,9 +1,3 @@
-# cache dependencies
-FROM node:20-slim AS node_cache
-WORKDIR /cache/
-COPY package*.json .
-RUN npm install --prefer-offline --no-audit --progress=true --loglevel verbose --omit=dev
-
 # Build and start
 FROM node:20-slim
 
@@ -44,7 +38,6 @@ RUN ARCH=$(uname -m) && \
 # Export Go path
 ENV PATH=$PATH:/usr/local/go/bin
 
-COPY --from=node_cache /cache/ /cache/
 COPY dev.entrypoint.sh /tmp/
 RUN chmod +x /tmp/dev.entrypoint.sh
 
