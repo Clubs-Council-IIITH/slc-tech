@@ -1,24 +1,24 @@
 {
   "main": [
     {
-      "name": "facebook",
-      "icon": "fab fa-facebook",
-      "link": "https://www.facebook.com/"
-    },
-    {
-      "name": "twitter",
-      "icon": "fab fa-twitter",
-      "link": "https://twitter.com/"
+      "name": "Clubs Website",
+      "icon": "fa-solid fa-globe",
+      "link": "https://clubs.iiit.ac.in/"
     },
     {
       "name": "github",
       "icon": "fab fa-github",
-      "link": "https://www.github.com/"
+      "link": "https://github.com/Clubs-Council-IIITH"
     },
     {
-      "name": "linkedin",
-      "icon": "fab fa-linkedin",
-      "link": "https://www.linkedin.com/"
+      "name": "email",
+      "icon": "fa-sharp fa-solid fa-envelope",
+      "link": "mailto:webadmin@students.iiit.ac.in"
+    },
+    {
+      "name": "Help Portal",
+      "icon": "fa-solid fa-circle-question",
+      "link": "https://help.iiit.ac.in/projects/web-administration/issues/new"
     }
   ]
 }
