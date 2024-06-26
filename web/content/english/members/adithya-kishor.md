@@ -1,7 +1,7 @@
 ---
-title: Aditya Kishor
-email: aditya.kishor@research.iiit.ac.in
-image: "/images/members/aditya-kishor.png"
+title: Adithya Kishor
+email: adithya.kishor@research.iiit.ac.in
+image: "/images/members/adithya-kishor.png"
 description: this is meta description
 social:
   - name: github

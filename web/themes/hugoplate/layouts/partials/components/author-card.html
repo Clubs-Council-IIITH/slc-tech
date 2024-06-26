@@ -12,7 +12,9 @@
       src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=128&pg&d=identicon" />
   {{ end }}
   <h4 class="mb-3">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <a href='https://clubs.iiit.ac.in/profile/{{ (index (split .Params.email "@") 0) }}'>{{ .Title }}</a>
+    <!-- <a href="{{ .RelPermalink }}">{{ .Title }}</a> -->
+  </h4>
   </h4>
   <p class="content mb-4 light-bold">{{ .Params.email }}</p>
   <p class="mb-4">

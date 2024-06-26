@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+  {{ partial "page-header" (dict "Context" . "hideBreadcrumb" true) }}
 
 
   <section class="section">
@@ -11,7 +11,7 @@
             {{ $paginator:= .Paginate .RegularPages }}
             {{ range $paginator.Pages }}
               <div class="md:col-6 mb-14">
-                {{ partial "components/blog-card" . }}
+                {{ partial "components/report-card" . }}
               </div>
             {{ end }}
           </div>

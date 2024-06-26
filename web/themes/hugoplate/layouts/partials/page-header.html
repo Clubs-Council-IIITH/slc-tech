@@ -1,9 +1,14 @@
+{{ $context := .Context }}
+
 <section>
   <div class="container text-center">
     <div
       class="from-body to-theme-light dark:from-darkmode-body dark:to-darkmode-theme-light rounded-2xl bg-gradient-to-b px-8 py-14">
-      <h1>{{ T (printf "%s" (lower .Title)) | default .Title | title }}</h1>
-      {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-6") }}
+      <h1>{{ T (printf "%s" (lower $context.Title)) | default $context.Title | title }}</h1>
+      {{ $hideBreadcrumb := or (.Params.hideBreadcrumb | default false) (.hideBreadcrumb | default false) }}
+      {{ if not $hideBreadcrumb }}
+        {{ partial "components/breadcrumb" (dict "Context" $context "Class" "mt-6") }}
+      {{ end }}
     </div>
   </div>
 </section>
