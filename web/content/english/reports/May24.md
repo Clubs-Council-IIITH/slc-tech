@@ -3,7 +3,7 @@ title: "Monthly Progress report - May 2024"
 meta_title: ""
 description: ""
 date: 2024-05-30T05:00:00Z
-image: "/images/blogs/april2.png"
+image: "/images/blogs/may.png"
 categories: ["Monthy Report"]
 author: "Bhav Beri"
 draft: false

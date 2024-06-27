@@ -3,7 +3,7 @@ title: "Monthly Progress report - April 2024"
 meta_title: ""
 description: ""
 date: 2024-05-21T05:00:00Z
-image: "/images/blogs/april2.png"
+image: "/images/blogs/april.png"
 categories: ["Monthy Report"]
 author: "Abhiram Tilak"
 draft: false
