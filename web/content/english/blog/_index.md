@@ -1,5 +1,6 @@
 ---
 title: "Blog Posts"
 meta_title: ""
-description: "this is meta description"
+description: "Institute Web Administrator and SLC Web & System Administrator Team"
+meta_image: "/images/og-image.jpg"
 ---

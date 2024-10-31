@@ -3,7 +3,7 @@ title: "Privacy"
 # meta title
 meta_title: ""
 # meta description
-description: "This is meta description"
+description: "Institute Web Administrator and SLC Web & System Administrator Team"
 # save as draft
 draft: false
 ---

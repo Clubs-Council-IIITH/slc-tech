@@ -27,6 +27,9 @@
 <!-- custom script -->
 {{ partialCached "custom-script.html" . }}
 
+<!-- Add og:image as images/og-image.jpg -->
+<meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.jpg" />
+
 
 <!-- google analytics -->
 {{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
