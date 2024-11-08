@@ -4,13 +4,28 @@
 
   <section class="section">
     <div class="container">
+      <h2 style="text-align: center;margin-bottom: 40px;">Current Members</h2>
       <div class="row">
-        {{ range .RegularPages }}
+        {{ range where .Site.RegularPages "Section" "members" }}
           <div class="md:col-6 lg:col-4 mb-14">
             {{ partial "components/author-card" . }}
           </div>
         {{ end }}
       </div>
     </div>
+
+    <hr style="margin: 0px 10em 5em 10em; border: 1px solid grey; border-radius: 1em; background-color: gray;">
+    <div class="container">
+      <h2 style="text-align: center;margin-bottom: 40px;">Past Members</h2>
+      <div class="row">
+        {{ range where .Site.RegularPages "Section" "past-members" }}
+          <div class="md:col-6 lg:col-4 mb-14">
+            {{ partial "components/author-card" . }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
   </section>
-{{ end }}
+
+  {{ end }}
