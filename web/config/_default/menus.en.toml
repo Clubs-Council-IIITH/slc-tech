@@ -26,8 +26,13 @@ pageRef = "/members"
 weight = 3
 
 [[main]]
-name = "Blog"
-pageRef = "/blog"
+name = "Updates"
+pageRef = "/updates"
+weight = 3
+
+[[main]]
+name = "Projects"
+pageRef = "/Projects"
 weight = 3
 
 #[[main]]

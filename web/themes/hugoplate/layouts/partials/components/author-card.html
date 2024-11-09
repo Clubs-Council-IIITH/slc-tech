@@ -2,8 +2,10 @@
   class="bg-theme-light dark:bg-darkmode-theme-light rounded p-8 text-center">
   {{ $image:= .Params.image }}
   {{ if $image }}
+    <a href='https://clubs.iiit.ac.in/profile/{{ (index (split .Params.email "@") 0) }}' target="_blank" rel="noopener noreferrer">
     {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mx-auto mb-6 rounded" "size" "120x120") }}
   {{ else if .Params.Email }}
+    </a>
     <img
       class="mx-auto mb-6 rounded"
       alt="{{ .Title }}"
@@ -12,8 +14,7 @@
       src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=128&pg&d=identicon" />
   {{ end }}
   <h4 class="mb-3">
-    <a href='https://clubs.iiit.ac.in/profile/{{ (index (split .Params.email "@") 0) }}'>{{ .Title }}</a>
-    <!-- <a href="{{ .RelPermalink }}">{{ .Title }}</a> -->
+    <a href='https://clubs.iiit.ac.in/profile/{{ (index (split .Params.email "@") 0) }}' target="_blank" rel="noopener noreferrer" >{{ .Title }}</a>
   </h4>
   </h4>
   <p class="content light-bold">{{ .Params.start_year }} - {{ .Params.end_year  }}</p>
