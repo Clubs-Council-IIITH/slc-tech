@@ -26,14 +26,22 @@ pageRef = "/members"
 weight = 3
 
 [[main]]
+name = "Documentation"
+url = "https://slc-docs.iiit.ac.in/"
+weight = 4
+[main.params]
+    external = true
+    newTab = true
+
+[[main]]
 name = "Updates"
 pageRef = "/updates"
-weight = 3
+weight = 5
 
 [[main]]
 name = "Projects"
 pageRef = "/Projects"
-weight = 3
+weight = 5
 
 #[[main]]
 #name = "Contact"
