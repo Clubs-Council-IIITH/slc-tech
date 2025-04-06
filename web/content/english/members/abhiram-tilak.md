@@ -11,5 +11,4 @@ start_year: 2024
 end_year: present
 ---
 
-bhav please fill this description with individual person's work split and all of
-that. Need not be real but atleast what people look from outside
+Abhiram Tilak joined in January 2024 as System + Web Administrator in the Tech Team. He is an integral part in maintaining the infrastructure. His main interests lie in system management and backend development.

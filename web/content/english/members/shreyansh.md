@@ -14,4 +14,4 @@ start_year: 2024
 end_year: present
 ---
 
-lrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+Shreyansh started in the team in May 2024 as Web Administrator mainly responsible for the frontend design and development. He has worked on various projects like CAS redesign and the dark-mode functionality.

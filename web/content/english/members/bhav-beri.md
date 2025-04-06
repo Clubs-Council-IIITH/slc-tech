@@ -14,4 +14,4 @@ start_year: 2022
 end_year: present
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+Bhav joined as Tech Team member in 2022. He became the Tech Lead for the team in January 2023 as well as was the one to restart the Institute WebAdmin position. He has been a crtitical part in the initial development of the new website and further development of the site.

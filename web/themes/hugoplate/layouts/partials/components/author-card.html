@@ -20,7 +20,8 @@
   <p class="content light-bold">{{ .Params.start_year }} - {{ .Params.end_year  }}</p>
   <p class="content mb-4 light-bold">{{ .Params.email }}</p>
   <p class="mb-4">
-    {{ .Summary }}
+    {{ .Content }}
+    <!-- {{ .Summary }}  -->
   </p>
   <ul class="social-icons">
     {{ range .Params.social }}
