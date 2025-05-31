@@ -14,11 +14,8 @@
           </h1>
           <ul class="mb-4">
             <li class="mr-4 inline-block">
-              <a
-                href="{{ `members/` | relLangURL }}{{ .Params.Author | urlize }}/">
-                <i class="fa-regular fa-circle-user mr-2"></i
-                >{{ .Params.author }}
-              </a>
+                <i class="fa-regular fa-circle-user mr-2"></i>
+                {{ .Params.author }}
             </li>
             {{ $categories:= .Params.categories }}
             {{ if $categories }}
@@ -38,6 +35,10 @@
             <li class="mr-4 inline-block">
               <i class="fa-regular fa-clock mr-2"></i>
               {{ time.Format ":date_long" .PublishDate }}
+            </li>
+            <li class="mr-4 inline-block">
+              <i class="fa-regular fa-tag mr-2"></i>
+              {{ .Params.status }}
             </li>
           </ul>
           <div class="content mb-10">
@@ -80,7 +81,7 @@
       {{ $related = $related | shuffle | first 3 }}
       {{ with $related }}
         <div class="section pb-0">
-          <h2 class="h3 mb-12">{{ T "related_posts" }}</h2>
+          <h2 class="h3 mb-12">Related Projects</h2>
           <div class="row">
             {{ range . }}
               <div class="lg:col-4 md:col-6 mb-14">

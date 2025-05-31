@@ -4,8 +4,9 @@ author: "WebAdmins"
 categories: ["Website", "Development", "Institute"]
 tags: ["IIIT", "Main Site", "Wordpress"]
 image: "/images/projects/IIIT-main-site.png"
-date: 2024-05-17T10:00:00+05:30
+date: 2025-05-31T10:00:00+05:30
 draft: false
+status: "published"
 buttons:
   - aria: "Website"
     href: "https://www.iiit.ac.in"
@@ -26,14 +27,10 @@ The IIIT Main Site project showcases the institute's information, news, projects
 - Responsive design with a modern UI
 - Customizable theme with various layouts
 - Integration with different plugins for features like news, projects, and members
-- Multiple content sections including projects, members, and reports
+- Multiple content sections including projects, members, and reports.
 
 ## Technologies Used
 
 - Wordpress
 - Pro Plugins (e.g., Elementor, WPBakery, etc.)
 - PHP
-
-## Project Status
-
-The project is currently live and actively maintained.
