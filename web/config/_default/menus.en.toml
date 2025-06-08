@@ -33,10 +33,10 @@ weight = 4
     external = true
     newTab = true
 
-[[main]]
-name = "Updates"
-pageRef = "/updates"
-weight = 5
+# [[main]]
+# name = "Updates"
+# pageRef = "/updates"
+# weight = 5
 
 [[main]]
 name = "Projects"
