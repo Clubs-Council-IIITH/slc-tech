@@ -1,23 +1,41 @@
 {{ define "main" }}
   {{ partial "page-header" (dict "Context" .) }}
 
-
-  <section class="section">
+  <!-- Institute Websites -->
+  <section class="section p-10">
     <div class="container">
+      <!-- <h2 style="text-align: center;margin-bottom: 40px;">All Websites</h2> -->
       <div class="row gx-5">
-        <!-- blog posts -->
         <div class="lg:col-auto">
           <div class="row">
-            {{ $paginator:= .Paginate .RegularPages }}
-            {{ range $paginator.Pages }}
-              <div class="md:col-4 mb-14">
-                {{ partial "components/blog-card" . }}
+            {{ $institutePages := where .Site.RegularPages "Section" "projects" }}
+            {{ range $institutePages }}
+              <div class="md:col-4 mb-5">
+                {{ partial "components/project-card" . }}
               </div>
             {{ end }}
           </div>
-          {{ partial "components/pagination.html" . }}
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Student Life Websites -->
+  <!-- <section class="section p-10">
+    <div class="container">
+      <h2 style="text-align: center;margin-bottom: 40px;">Student Life Websites</h2>
+      <div class="row gx-5">
+        <div class="lg:col-auto">
+          <div class="row">
+            {{ $studentPages := where .Site.RegularPages "Section" "student-projects" }}
+            {{ range $studentPages }}
+              <div class="md:col-4 mb-5">
+                {{ partial "components/project-card" . }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 {{ end }}

@@ -1,0 +1,42 @@
+<div
+  class="bg-body dark:bg-darkmode-body shadow-lg border border-gray rounded-lg hover:scale-105 transition duration-300">
+  {{ $image:= .Params.image }}
+  {{ if $image }}
+    <div class="relative">
+      {{ partial "image" (dict "Src" $image "Context" .Page "Alt" .Title "Class" "mb-2 w-full rounded aspect-[16/10]") }}
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-darkmode-body rounded"></div>
+    </div>
+  {{ end }}
+  <div class="p-6 shadow-lg">
+    <h4 class="mb-3">
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </h4>
+    {{ $categories:= .Params.categories }}
+    {{ if $categories }}
+      <ul class="mb-4">
+        <li class="mr-4 inline-block">
+          {{ $buttons := .Params.buttons }}
+          {{ if $buttons }}
+            {{ range $link := $buttons }}
+              <a
+                href="{{ $link.href }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ms-1">
+                <i class="{{ $link.icon }} mr-1"></i>{{ $link.aria }}</a
+              >{{- if not (eq $link (index $buttons (sub (len $buttons) 1))) }},
+              {{- end }}
+            {{ end }}
+          {{ end }}
+        </li>
+      </ul>
+    {{ end }}
+    <p class="mb-6">{{ .Summary }}</p>
+    <a class="btn btn-outline-primary btn-sm" href="{{ .RelPermalink }}">
+      {{ T "read_more" }}
+    </a>
+  </div>
+</div>

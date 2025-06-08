@@ -13,13 +13,40 @@
             {{ .Title }}
           </h1>
           <ul class="mb-4">
-            <li class="mr-4 inline-block">
-              <a
-                href="{{ `members/` | relLangURL }}{{ .Params.Author | urlize }}/">
-                <i class="fa-regular fa-circle-user mr-2"></i
-                >{{ .Params.author }}
-              </a>
-            </li>
+            {{ $author := .Params.author }}
+            {{ if $author }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-circle-user mr-2"></i>
+              {{ $author | humanize }}
+              </li>
+            {{ end }}
+            {{ $developers := .Params.developers }}
+            {{ if $developers }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-code mr-2"></i>
+              {{ range $i, $dev := $developers }}
+                <span>{{ $dev }}{{ if ne $i (sub (len $developers) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
+            {{ $maintainers := .Params.maintainers }}
+            {{ if $maintainers }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-tools mr-2"></i>
+              {{ range $i, $maint := $maintainers }}
+                <span>{{ $maint }}{{ if ne $i (sub (len $maintainers) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
+            {{ $revamp := .Params.revamp }}
+            {{ if $revamp }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-sync-alt mr-2"></i>
+              {{ range $i, $rev := $revamp }}
+                <span>{{ $rev }}{{ if ne $i (sub (len $revamp) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
             {{ $categories:= .Params.categories }}
             {{ if $categories }}
               <li class="mr-4 inline-block">
@@ -39,6 +66,19 @@
               <i class="fa-regular fa-clock mr-2"></i>
               {{ time.Format ":date_long" .PublishDate }}
             </li>
+            <li class="mr-4 inline-block">
+              <i class="fa-regular fa-tag mr-2"></i>
+              {{ .Params.status }}
+            </li>
+            {{ $buttons := .Params.buttons }}
+            {{ if $buttons }}
+              {{ range $button := $buttons }}
+              <li class="mr-4 inline-block">
+                <i class="{{ $button.icon }} mr-2" aria-hidden="true"></i>
+                <a href="{{ $button.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $button.aria }}">{{ $button.aria }}</a>
+              </li>
+              {{ end }}
+            {{ end }}
           </ul>
           <div class="content mb-10">
             {{ partial "toc.html" (dict "Class" "blog" "Collapsed" false "TableOfContents" .TableOfContents ) }}
@@ -80,11 +120,11 @@
       {{ $related = $related | shuffle | first 3 }}
       {{ with $related }}
         <div class="section pb-0">
-          <h2 class="h3 mb-12">{{ T "related_posts" }}</h2>
+          <h2 class="h3 mb-12">Related Projects</h2>
           <div class="row">
             {{ range . }}
               <div class="lg:col-4 md:col-6 mb-14">
-                {{ partial "components/blog-card" . }}
+                {{ partial "components/project-card" . }}
               </div>
             {{ end }}
           </div>
