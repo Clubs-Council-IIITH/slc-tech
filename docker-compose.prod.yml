@@ -12,12 +12,22 @@ services:
     image: nginx:alpine
     volumes:
       - slc-tech-vol:/usr/share/nginx/html
-    # ports:
-    #   - 80:80
     depends_on:
       slc-tech-build:
         condition: service_completed_successfully
     restart: unless-stopped
+    networks:
+      app-network:
+        ipv4_address: 170.24.0.6
+
+networks:
+  app-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 170.24.0.0/16
+          gateway: 170.24.0.1
+
 
 volumes:
   slc-tech-vol:
