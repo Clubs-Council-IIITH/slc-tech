@@ -1,6 +1,7 @@
 ---
 title: "IT Services Website"
-author: "WebAdmins"
+developers: ["WebAdmins"]
+maintainers: ["ITSupport"]
 categories: ["IT Office", "Development", "Services"]
 tags: ["Internal", "IT Office", "Wordpress"]
 image: "/images/projects/default.png"

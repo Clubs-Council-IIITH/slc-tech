@@ -1,6 +1,6 @@
 ---
 title: "Life@IIITH Website"
-author: "WebAdmins"
+developers: ["WebAdmins"]
 categories: ["Website", "Development", "Institute", "Life"]
 tags: ["IIIT", "campuslife", "Wordpress"]
 image: "/images/projects/life.png"

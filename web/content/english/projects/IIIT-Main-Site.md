@@ -1,6 +1,6 @@
 ---
 title: "IIIT Main Site"
-author: "WebAdmins"
+maintainers: ["WebAdmins"]
 categories: ["Website", "Development", "Institute"]
 tags: ["IIIT", "Main Site", "Wordpress"]
 image: "/images/projects/IIIT-main-site.png"

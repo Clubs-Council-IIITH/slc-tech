@@ -1,6 +1,7 @@
 ---
 title: "LSI Website"
-author: "WebAdmins"
+developers: ["LSI Team"]
+revamp: ["WebAdmins"]
 categories: ["Website", "Development", "LSI", "Research"]
 tags: ["IIIT", "Research", "Wordpress", "LSI"]
 image: "/images/projects/lsi.png"

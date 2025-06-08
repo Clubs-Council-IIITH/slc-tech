@@ -1,6 +1,7 @@
 ---
 title: "Portals@IIITH Website"
-author: "WebAdmins"
+developers: ["IT Office"]
+maintainers: ["WebAdmins"]
 categories: ["Website", "Development", "Institute"]
 tags: ["IIIT", "All Sites", "light-dark-mode"]
 image: "/images/projects/portals.png"

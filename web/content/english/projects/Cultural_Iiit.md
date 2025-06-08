@@ -1,6 +1,6 @@
 ---
 title: "Cultural Council Website"
-author: "WebAdmins"
+developers: ["WebAdmins"]
 categories: ["Student-Body", "Development", "Events", "Culture"]
 tags: ["IIITH", "Events", "Life", "Culture"]
 image: "/images/projects/cultural.png"

@@ -1,6 +1,7 @@
 ---
 title: "Research@IIITH Website"
-author: "WebAdmins"
+developers: ["IT Office"]
+revamp: ["WebAdmins"]
 categories: ["Website", "Development", "Internal", "Research"]
 tags: ["IIIT", "Internal", "Wordpress", "Research"]
 image: "/images/projects/research.png"

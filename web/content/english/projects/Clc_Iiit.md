@@ -1,6 +1,6 @@
 ---
 title: "Campus Life Website"
-author: "WebAdmins"
+developers: ["WebAdmins"]
 categories: ["Student-Body", "Development", "Events"]
 tags: ["IIITH", "Events", "Life", "Campus"]
 image: "/images/projects/clc.png"
@@ -12,8 +12,7 @@ buttons:
     href: "https://clc.iiit.ac.in/"
     icon: "fas fa-link"
   - aria: "GitHub"
-    href: "
-    "
+    href: "https://github.com/clubs-Council-IIITH/clc"
     icon: "fab fa-github"
 ---
 

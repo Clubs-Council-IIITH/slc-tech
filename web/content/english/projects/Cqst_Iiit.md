@@ -1,6 +1,7 @@
 ---
 title: "CQST Research Site"
-author: "WebAdmins"
+developers: ["WebAdmins"]
+maintainers: ["CQST Team"]
 categories: ["Website", "Development", "Research", "CQST"]
 tags: ["Research", "CQST", "Wordpress"]
 image: "/images/projects/Cqst.png"

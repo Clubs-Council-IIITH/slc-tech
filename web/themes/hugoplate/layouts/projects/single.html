@@ -13,10 +13,40 @@
             {{ .Title }}
           </h1>
           <ul class="mb-4">
-            <li class="mr-4 inline-block">
-                <i class="fa-regular fa-circle-user mr-2"></i>
-                {{ .Params.author }}
-            </li>
+            {{ $author := .Params.author }}
+            {{ if $author }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-circle-user mr-2"></i>
+              {{ $author | humanize }}
+              </li>
+            {{ end }}
+            {{ $developers := .Params.developers }}
+            {{ if $developers }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-code mr-2"></i>
+              {{ range $i, $dev := $developers }}
+                <span>{{ $dev }}{{ if ne $i (sub (len $developers) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
+            {{ $maintainers := .Params.maintainers }}
+            {{ if $maintainers }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-tools mr-2"></i>
+              {{ range $i, $maint := $maintainers }}
+                <span>{{ $maint }}{{ if ne $i (sub (len $maintainers) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
+            {{ $revamp := .Params.revamp }}
+            {{ if $revamp }}
+              <li class="mr-4 inline-block">
+              <i class="fa-regular fa-sync-alt mr-2"></i>
+              {{ range $i, $rev := $revamp }}
+                <span>{{ $rev }}{{ if ne $i (sub (len $revamp) 1) }}, {{ end }}</span>
+              {{ end }}
+              </li>
+            {{ end }}
             {{ $categories:= .Params.categories }}
             {{ if $categories }}
               <li class="mr-4 inline-block">
@@ -40,6 +70,15 @@
               <i class="fa-regular fa-tag mr-2"></i>
               {{ .Params.status }}
             </li>
+            {{ $buttons := .Params.buttons }}
+            {{ if $buttons }}
+              {{ range $button := $buttons }}
+              <li class="mr-4 inline-block">
+                <i class="{{ $button.icon }} mr-2" aria-hidden="true"></i>
+                <a href="{{ $button.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $button.aria }}">{{ $button.aria }}</a>
+              </li>
+              {{ end }}
+            {{ end }}
           </ul>
           <div class="content mb-10">
             {{ partial "toc.html" (dict "Class" "blog" "Collapsed" false "TableOfContents" .TableOfContents ) }}

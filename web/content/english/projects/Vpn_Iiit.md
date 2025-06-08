@@ -1,6 +1,7 @@
 ---
 title: "Vpn Website"
-author: "WebAdmins"
+developers: ["IT Office"]
+maintainer: ["WebAdmins"]
 categories: ["Website", "Network", "Institute"]
 tags: ["IIIT", "Instructions", "Network"]
 image: "/images/projects/vpn.png"

@@ -1,6 +1,6 @@
 ---
 title: "NSS IIITH Website"
-author: "WebAdmins"
+developers: ["WebAdmins"]
 categories: ["Student-Body", "Development", "Service"]
 tags: ["IIITH", "Events", "Service", "NSS"]
 image: "/images/projects/nss.png"
@@ -11,9 +11,9 @@ buttons:
   - aria: "Website"
     href: "https://nss.iiit.ac.in/"
     icon: "fas fa-link"
-  # - aria: "GitHub"
-  #   href: "https://github.com/iiit-main-site"
-  #   icon: "fab fa-github"
+  - aria: "GitHub"
+    href: "https://github.com/clubs-Council-IIITH/web_nss"
+    icon: "fab fa-github"
 ---
 
 This project represents the National Service Scheme (NSS) student body's events and details of IIIT Hyderabad.

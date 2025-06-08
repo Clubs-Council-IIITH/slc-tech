@@ -1,6 +1,7 @@
 ---
 title: "Clubs Council Website"
-author: "WebAdmins"
+developers: ["CC Tech Team"]
+maintainers: ["SLC Tech Team"]
 categories: ["Website", "Development", "Clubs Council"]
 tags: ["Clubs Council", "Clubs", "IIITH", "CC"]
 image: "/images/projects/clubs-council.png"

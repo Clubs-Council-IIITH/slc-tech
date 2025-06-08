@@ -1,6 +1,6 @@
 ---
 title: "CAS Login Page"
-author: "WebAdmins"
+maintainers: ["WebAdmins"]
 categories: ["Login Page", "Authentication", "Institute"]
 tags: ["CAS", "IIITH", "Light-Dark-Mode"]
 image: "/images/projects/CAS.png"

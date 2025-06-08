@@ -1,6 +1,7 @@
 ---
 title: "My IIITH App"
-author: "WebAdmins, DASS Team"
+developers: ["DASS Team"]
+maintainers: ["WebAdmins"]
 categories: ["Application", "Development", "IIIT", "DASS"]
 tags: ["IIIT", "App", "Easy Access"]
 image: "/images/projects/my-iiit-app.png"
