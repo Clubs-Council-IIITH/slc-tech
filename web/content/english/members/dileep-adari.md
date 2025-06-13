@@ -10,8 +10,10 @@ social:
   - name: linkedin
     icon: fa-brands fa-linkedin
     link: https://in.linkedin.com/in/dileep-kumar-adari-298169252
+start_month: October
 start_year: 2023
-end_year: present
+end_month:
+end_year: Present
 ---
 
 Dileep joined the team as Web Administrator in October 2023. He is an important member for maintaining and building the frontend of the website. He is a super fast full-stack developer and has a keen interest in web development. 

@@ -10,7 +10,9 @@ social:
   - name: linkedin
     icon: fa-brands fa-linkedin
     link: https://in.linkedin.com/in/aneesh-sambu
+start_month: January
 start_year: 2024
+end_month: September
 end_year: 2024
 ---
 

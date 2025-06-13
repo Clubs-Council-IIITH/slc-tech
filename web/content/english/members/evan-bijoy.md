@@ -10,8 +10,10 @@ social:
   - name: linkedin
     icon: fa-brands fa-linkedin
     link: https://www.linkedin.com/in/evan-bijoy-5446021b9/
+start_month: October
 start_year: 2024
-end_year: present
+end_month:
+end_year: Present
 ---
 
 Evan Bijoy joined the team in October 2024 as a Design Member and Web Administrator, handling frontend design and development. He has worked on projects like the VPN website and courier portal.

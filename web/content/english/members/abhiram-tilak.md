@@ -7,8 +7,10 @@ social:
   - name: github
     icon: fa-brands fa-github
     link: https://github.com/abhiramtilakiiit
+start_month: January
 start_year: 2024
-end_year: present
+end_month:
+end_year: Present
 ---
 
 Abhiram Tilak joined in January 2024 as System + Web Administrator in the Tech Team. He is an integral part in maintaining the infrastructure. His main interests lie in system management and backend development.
