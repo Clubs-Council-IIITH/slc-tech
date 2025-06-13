@@ -1,7 +1,7 @@
 ---
 title: Ojas Kataria
 email: ojas.kataria@research.iiit.ac.in
-image: "/images/members/ojas-kataria.png"
+image: "/images/members/ojas-kataria.jpg"
 description: this is meta description
 social:
   - name: github
