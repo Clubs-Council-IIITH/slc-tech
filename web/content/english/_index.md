@@ -1,6 +1,6 @@
 ---
 # title: "SLC-Tech Team, IIIT Hyderabad"
-meta_title: "About"
+meta_title: "About, Tech Team, IIIT Hyderabad"
 image: "/images/avatar.png"
 description: "Institute Web Administrator and SLC Web & System Administrator Team"
 meta_image: "/images/og-image.jpg"
