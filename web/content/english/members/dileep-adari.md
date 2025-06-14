@@ -9,7 +9,7 @@ social:
     link: https://github.com/Dileepadari
   - name: linkedin
     icon: fa-brands fa-linkedin
-    link: https://in.linkedin.com/in/dileep-kumar-adari-298169252
+    link: https://in.linkedin.com/in/dileep-kumar-adari/
 start_month: October
 start_year: 2023
 end_month:

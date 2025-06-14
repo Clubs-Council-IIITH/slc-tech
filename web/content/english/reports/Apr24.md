@@ -4,7 +4,7 @@ meta_title: ""
 description: ""
 date: 2024-05-21T05:00:00Z
 image: "/images/blogs/april.png"
-categories: ["Monthy Report"]
+categories: ["Monthly Report"]
 author: "Abhiram Tilak"
 draft: false
 ---

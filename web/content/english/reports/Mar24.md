@@ -4,7 +4,7 @@ meta_title: ""
 description: ""
 date: 2024-03-28T06:00:00Z
 image: "/images/blogs/march.png"
-categories: ["Monthy Report"]
+categories: ["Monthly Report"]
 author: "Bhav Beri"
 draft: false
 ---
