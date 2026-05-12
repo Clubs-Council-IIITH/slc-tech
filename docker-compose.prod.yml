@@ -16,18 +16,8 @@ services:
       slc-tech-build:
         condition: service_completed_successfully
     restart: unless-stopped
-    networks:
-      app-network:
-        ipv4_address: 170.24.0.6
-
-networks:
-  app-network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 170.24.0.0/16
-          gateway: 170.24.0.1
-
+    ports:
+      - 81:80
 
 volumes:
   slc-tech-vol:
