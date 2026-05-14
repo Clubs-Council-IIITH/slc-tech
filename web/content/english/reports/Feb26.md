@@ -2,7 +2,7 @@
 title: "Monthly Progress report - February 2026"
 meta_title: ""
 description: ""
-date: 2026-05-13T13:30:00Z
+date: 2026-05-14T06:30:00Z
 image: "/images/blogs/february.png"
 categories: ["Monthly Report"]
 author: "Abhiram Tilak"
