@@ -2,7 +2,7 @@
 title: "Monthly Progress report - June-July 2025"
 meta_title: ""
 description: ""
-date: 2026-05-13T05:30:00Z
+date: 2026-05-13T07:30:00Z
 image: "/images/blogs/july.png"
 categories: ["Monthly Report"]
 author: "Abhiram Tilak"
