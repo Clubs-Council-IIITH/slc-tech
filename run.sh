@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 docker compose -p slc-tech-web up --build
 

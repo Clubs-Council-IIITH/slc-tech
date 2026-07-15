@@ -124,3 +124,4 @@ AFTER:
 - Completion of setup of clubs-dev.iiit.ac.in
 - Allow exceptions for clubs to bypass the event report constraint.
 - Inventory management initial setup
+
