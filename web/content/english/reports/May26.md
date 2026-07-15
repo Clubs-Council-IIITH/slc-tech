@@ -15,20 +15,25 @@ draft: false
  
 ### Team Members
  
-- Bhav Beri (Tech Lead)
-- Dileepkumar Adari (Web Administrator)
 - Abhiram Tilak (System Administrator)
 - Evan Bijoy (Web + Design Administrator)
 - Ojas Kataria (System Administrator)
 - Rithik Reddy Palla (Web Administrator)
+- Ashwin Aravind (Web Administrator)
+- Avani Mandlik (Web Administrator)
+
 ### Clubs Council Website
+
  ![slo_access](/images/reports/May26/slo_access.png)
 - Provided access to SLO for editing and managing their members, including frontend and backend changes and updated route permissions ([web#191](https://github.com/Clubs-Council-IIITH/web/pull/191), [members#28](https://github.com/Clubs-Council-IIITH/members/pull/28), [clubs/slo_members_access](https://github.com/Clubs-Council-IIITH/clubs/tree/slo_members_access))
+
 ### Inventory Management System
+
  ![inventory_home](/images/reports/May26/inventory_home.png)
 - Home page for inventory completed
 - Transactions frontend done
 - Individual item pages are pending
+
 ### Clubs Server
  
 - Set up a new repository for backup scripts of the base machine ([cc-server-backup](https://github.com/Clubs-Council-IIITH/cc-server-backup))
